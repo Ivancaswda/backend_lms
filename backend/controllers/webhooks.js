@@ -7,7 +7,7 @@ import courseModel from "../models/courseModel.js";
 
 const clerkWebhooks = async (request, response) => {
     try {
-        const whook = new Webhook(process.env.CLERk_WEBHOOK_SECRET)
+        const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
 
         await whook.verify(JSON.stringify(request.body), {
             'svix-id': request.headers['svix-id'],
